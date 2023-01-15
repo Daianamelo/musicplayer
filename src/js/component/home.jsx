@@ -41,9 +41,9 @@ const Home = () => {
 		<>
 {/* dibujamos la lista de canciones */}
 
-		<ul>
-			{sound.map((item, index)=><li key={item.id}>{item.name}<button onClick={() => playSong(index)}>x</button></li>)}
-		</ul>
+		<ol class="text-light bg-dark" type="1">
+			{sound.map((item, index)=><li className="elements m-2 border-bottom" key={item.id}>{item.name}<button onClick={() => playSong(index)}><i className="fas fa-play-circle"></i></button></li>)}
+		</ol>
 		
 		<div>
 			<audio controls ref={audioElemento}>
